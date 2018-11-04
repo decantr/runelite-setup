@@ -32,9 +32,9 @@ if [ ! $? -eq 0 ]; then
 fi
 
 echo "getting logo"
-curl -L --progress-bar $urlIMG --output /usr/share/pixmaps/runelite.png
+curl -Ls $urlIMG --output /usr/share/pixmaps/runelite.png
 
 echo "getting desktop file"
-curl -L --progress-bar $urlDES --output /usr/share/applications/runelite.desktop
+curl -Ls $urlDES --output /usr/share/applications/runelite.desktop
 
 exit 0
