@@ -27,8 +27,10 @@ echo "downloading jar to /opt/runelite"
 curl -L --progress-bar $urlJAR --output /opt/runelite/runelite.jar
 
 if [ ! $? -eq 0 ]; then
-    echo "error downloading file. exiting"
-		exit 1
+	echo "error downloading file. exiting"
+	exit 1
+elif ! echo "aae08967e851d6599ccd60ec93fe7b5db94d8353da6b91df39d6b807dd6f0662  /opt/runelite/runelite.jar" | sha256sum -c -  ; then
+	exit 1
 fi
 
 echo "getting logo"
