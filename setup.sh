@@ -26,7 +26,7 @@ echo "downloading jar to /opt/runelite"
 
 curl -L --progress-bar $urlJAR --output /opt/runelite/runelite.jar
 
-if $? -eq 0 ; then
+if [ ! $? -eq 0 ]; then
     echo "error downloading file. exiting"
 		exit 1
 fi
