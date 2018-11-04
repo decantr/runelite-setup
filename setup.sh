@@ -12,7 +12,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # checking for java
-if java -version 2>&1 | awk -F '"' '/version/ {print $2}' | grep -e "10." -e "8." ; then
+if java -version 2>&1 | awk -F '"' '/version/ {print $2}' | grep -e "10." -e "8." -q ; then
 	echo "java found"
 else
 	echo "installing openjdk-11"
