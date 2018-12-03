@@ -3,7 +3,7 @@
 Type=Application
 Terminal=false
 # assumes runelite found in /opt/runelite/runelite.jar
-Exec=env GDK_SCALE=2 java -jar /opt/runelite/runelite.jar --mode=OFF
+Exec=java -jar /opt/runelite/runelite.jar
 Name=RuneLite
 # assumes logo in /usr/share/pixmaps/runelite.png
 Icon=runelite.png
